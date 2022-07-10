@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Timeline</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<!--
+`body` tag options:
+7
+  Apply one or more of the following classes to to the body tag
+  to get the desired effect
+
+  * sidebar-collapse
+  * sidebar-mini
+-->
+<style>
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: -21px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    background-color: #ffffff00;
+  }
+</style>
+<body class="hold-transition sidebar-mini">
+
+<div class="wrapper">
+  <!-- Navbar -->
+
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="aboutUs.html" class="nav-link">Наша команда</a>
+      </li>
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item">
+        <a class="btn btn-block btn-primary" href="https://t.me/+CIqgqpx0xMc0ZmNi">
+          Зв'язок в телеграмі
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Main Sidebar Container -->
+  <aside id="sidebar-t" class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a style="text-align: center;" href="#" class="brand-link">
+      <span class="brand-text font-weight-light">Марафон схуднення</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               <br /> with font-awesome or any other icon font library -->
+          <li class="nav-header">ДНІ МАРАФОНУ:</li>
+          <li class="nav-item">
+            <a href="index.html#day-1-2" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-flag nav-icon"></i>
+              <p>ДНІ 1-2</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="index.html#day-3-4" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДНІ 3-4</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="index.html#day-5-6" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 5-6</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="days_7-12.html#day-7-8" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 7-8</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="days_7-12.html#day-9-10" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 9-10</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="days_7-12.html#day-11-12" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 11-12</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="days_13-18.html#day-13-14" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 13-14</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="days_13-18.html#day-15-16" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 15-16</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="days_13-18.html#day-17-18" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 17-18</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="days_19-24.html#day-19-20" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 19-20</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="days_19-24.html#day-21-22" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 21-22</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="days_19-24.html#day-23-24" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 23-24</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="days_25-30.html#day-25-26" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 25-26</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="days_25-30.html#day-27-28" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-circle nav-icon"></i>
+              <p>ДЕНЬ 27-28</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="days_25-30.html#day-29-30" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-flag-checkered nav-icon"></i>
+              <p>ДЕНЬ 29-30</p>
+            </a>
+          </li>
+          <li class="nav-header">Про нас:</li>
+          <li class="nav-item">
+            <a href="aboutUs.html" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-child nav-icon"></i>
+              <p>Наша команда</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu  -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>ДНІ МАРАФОНУ:</h1>
+          </div>
+          <div class="card-body pad table-responsive">
+            <table class="table table-bordered text-center">
+              <tbody>
+              <tr>
+                <td>
+                  <a href="index.html" class="btn btn-block btn-outline-secondary">Дні 1- 6</a>
+                </td>
+                <td>
+                  <a href="days_7-12.html" class="btn btn-block btn-outline-secondary">Дні 7-12</a>
+                </td>
+                <td>
+                  <a href="days_13-18.html" class="btn btn-block btn-outline-secondary">Дні 13-18</a>
+                </td>
+                <td>
+                  <a href="days_19-24.html" class="btn btn-block btn-outline-secondary">Дні 19-24</a>
+                </td>
+                <td>
+                  <a href="days_25-30.html" class="btn btn-block btn-secondary">Дні 25-30</a>
+                </td>
+              </tr>
+              </tbody></table>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+        <!-- Timelime example  -->
+        <div class="row">
+          <div class="col-md-12">
+            <!-- The time line -->
+            <div class="timeline">
+              <button onclick="topFunction()" id="myBtn" class="btn btn-app"><i class="fas fa-angle-double-up"></i></button>
+              <!-- timeline time label -->
+              <a name="day-25-26"></a>
+              <div class="time-label">
+                <span class="bg-yellow">Дні 25-26</span>
+              </div>
+
+              <div>
+                <i class="fas fa-apple-alt bg-green"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Сніданок</a></h3>
+                  <div class="timeline-body">
+
+                    <ul>
+                      <li>2шт -варене яйце</li>
+                      <li>20 гр -моркви</li>
+                      <li>20 гр -огірка</li>
+                      <li>50 гр -редиски</li>
+                      <li>2 шт -хлібець</li>
+                      <li>Чай</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-40-35.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <i class="fas fa-carrot bg-orange"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Перекус</a></h3>
+                  <div class="timeline-body">
+                    <ul>
+                      <li>Яблуко 150 гр</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-40-44.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <i class="fas fa-blender bg-green"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Обід</a></h3>
+                  <div class="timeline-body">
+
+                    <ul>
+                      <li>260 гр макарони з помідором та сиром</li>
+                      <li>( 100 гр макарон, 100гр помідор, 30 гр сиру, 30 гр зелені )</li>
+                      <li>Сік 150 мл</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-40-53.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END timeline item -->
+              <!-- timeline item -->
+
+              <div>
+                <i class="fas fa-apple-alt bg-green"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Вечеря</a></h3>
+                  <div class="timeline-body">
+                    <ul>
+                      <li>1шт - варене яйце</li>
+                      <li>70 гр -м’ясо курки</li>
+                      <li>50 гр - зелені</li>
+                      <li>50 гр - помідор</li>
+                      <li>20 гр - моркви</li>
+                      <li>20 гр - перець</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-41-00.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- timeline item ніг та сідниць №2-->
+              <div>
+                <i class="fas fa-video bg-maroon"></i>
+
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="https://www.instagram.com/yankagrin97/" target="_blank">yankagrin97</a> Тренер</h3>
+
+                  <div class="timeline-body">
+                    <p><b>День №26</b></p>
+                    <div class="embed-responsive embed-responsive-16by9 col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/lNRyVCc2G9w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <br>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                      <button type="button" class="btn btn-block btn-secondary btn-xs cont_toggle1">Розгорнути опис вправ</button>
+                    </div>
+
+                    <div class="cont_b11" style="display: none;">
+                      <p>
+                      <h6><b>Присідання зі скручуванням </b></h6>
+                      <ul>
+                        <li>1.Поставте ноги на ширині плечей. </li>
+                        <li>2.Зробіть звичайний присед. </li>
+                        <li>3.На виході з присідання підніміть праве коліно і, скрутивши корпус, дотягніться коліном до лівого ліктя. </li>
+                        <li>4.Повторіть на іншу ногу. </li>
+                      </ul>
+
+                      <h6><b>Присідання пліє з гантеллю</b></h6>
+                      <ul>
+                        <li>1. Встаньте прямо, корпус затиснутий, спина пряма.</li>
+                        <li>2. Розмістіть ноги значно ширше плечей. Носки направлені нарізно.</li>
+                        <li>3. Тримаючи гантель обома руками перед вами, погляд спрямований вперед, згинайте коліна, опускаючись у присідання, виштовхуючи таз назад. Ваші коліна повинні слідувати за пальцями ніг по діагоналі.</li>
+                        <li>4. Опускайтеся вниз доки стегна не будуть паралельно підлозі.</li>
+                        <li>5. Затримайтеся на кілька секунд і повертайтеся в початкове положення, не зводячи коліна.</li>
+                      </ul>
+
+                      <h6><b>Перехресні випади</b></h6>
+                      <ul>
+                        <li>1.Поставте стопи близько один до одного, руки на пояс.</li>
+                        <li>2.Залиште праву ногу на місці, на вдиху виконайте випад (крок) лівою ногою назад трохи в діагональ на носок, таким чином, перехрестивши ноги.</li>
+                        <li>3.Коліно задньої ноги не стосується підлоги, а переднє залишається під прямим кутом.</li>
+                        <li>5.З видихом відштовхніться п’ятою опорної стопи і поверніть ліву ногу у вихідну точку. Важливо відчувати не тільки квадріцепс, але і сідничний м’яз при підйомі.</li>
+                      </ul>
+
+                      <h6><b>Сідничний місток </b></h6>
+                      <ul>
+                        <li>1.Займіть горизонтальне положення.</li>
+                        <li>2.Зігніть ноги в колінах.</li>
+                        <li>3.Розташуйте ноги на ширині ключових суглобів, щоб при підйомі тазу коліна та п'яти утворювали прямий кут.</li>
+                        <li>4.Підійміть таз допоки стегна не будуть повністю витягнуті.</li>
+                        <li>5.Стисніть сідниці вгорі.</li>
+                        <li>6.Повільно поверніться у вихідне положення</li>
+                      </ul>
+
+                      <h6><b>Планка</b></h6>
+                      <ul>
+                        <li>1.Прийміть горизонтальне положення.
+                          Плечі та лікті мають чітко стояти на одній лінії. Ноги – на ширині плечей.</li>
+                        <li>2.Втягніть живіт.</li>
+                        <li>3.Підтягніть куприк під себе та стисніть сідниці.</li>
+                        <li>4.Залишайтесь у такому положенні 45 секунд.</li>
+                      </ul>
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- timeline item розтяжка-->
+              <div>
+                <i class="fas fa-video bg-maroon"></i>
+
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="https://www.instagram.com/yankagrin97/" target="_blank">yankagrin97</a> Тренер</h3>
+
+                  <div class="timeline-body">
+                    <p><b>День №26</b></p>
+                    <div class="embed-responsive embed-responsive-16by9 col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/HyfvEWRuJaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-clock bg-gray"></i>
+              </div>
+              <br>
+              <br>
+              <br>
+
+              <a name="day-27-28"></a>
+              <div class="time-label">
+                <span class="bg-yellow">Дні 27-28</span>
+              </div>
+
+              <div>
+                <i class="fas fa-apple-alt bg-green"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Сніданок</a></h3>
+                  <div class="timeline-body">
+
+                    <ul>
+                      <li>150 гр - каші ( на ваш смак) </li>
+                      <li>150 гр - овочі</li>
+                      <li>Чай</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-46-08.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <i class="fas fa-carrot bg-orange"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Перекус</a></h3>
+                  <div class="timeline-body">
+                    <ul>
+                      <li>Кефір 200 мл</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-46-18.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <i class="fas fa-blender bg-green"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Обід</a></h3>
+                  <div class="timeline-body">
+
+                    <ul>
+                      <li>100 гр - гречки</li>
+                      <li>50 гр - горошка</li>
+                      <li>0,5 - варене яйце</li>
+                      <li>70 гр - котлета</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-46-26.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END timeline item -->
+              <!-- timeline item -->
+
+              <div>
+                <i class="fas fa-apple-alt bg-green"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Вечеря</a></h3>
+                  <div class="timeline-body">
+                    <ul>
+                      <li>70 гр - спагеті</li>
+                      <li>100 гр філе курки</li>
+                      <li>70 гр - овочі</li>
+                      <li>50 гр зелень</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-46-34.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- timeline item прес-->
+              <div>
+                <i class="fas fa-video bg-maroon"></i>
+
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="https://www.instagram.com/yankagrin97/" target="_blank">yankagrin97</a> Тренер</h3>
+
+                  <div class="timeline-body">
+                    <p><b>День №27</b></p>
+                    <div class="embed-responsive embed-responsive-16by9 col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/GzyFp983r2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <br>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                      <button type="button" class="btn btn-block btn-secondary btn-xs cont_toggle2">Розгорнути опис вправ</button>
+                    </div>
+
+                    <div class="cont_bl2" style="display: none;">
+                      <p>
+                      <h6><b>Класичні скручування</b></h6>
+                      <ul>
+                        <li>1.Початкове положення: лежачи на спині, ноги зігнуті в колінах і щільно стоять на підлозі.</li>
+                        <li>2. Плавно підніміть плечі на 10-15 см, округляючи спину і скручуючись у напрямку колін. </li>
+                        <li>3. Затримайтеся на 1-2 сек, потім повільно опустіть корпус, проте не торкайтеся плечима підлоги.</li>
+                      </ul>
+
+                      <h6><b>Велосипед</b></h6>
+                      <ul>
+                        <li>1.Потрібно лягти на спину, розташувати руки вздовж тіла. При цьому ноги витягнуті вільно, в них відсутня напруга. </li>
+                        <li>2.Руки відводяться за голову, потім піднімають плечі. Важливо, щоб поперек при цьому залишалася щільно притиснутою до підлоги.</li>
+                        <li>3.Ноги піднімаються, згинаються в колінах.</li>
+                        <li>4.Рухи ногами нагадують катання на велосипеді. Спочатку ліве коліно стосується правого ліктя, потім праве коліно – лівого ліктя. Не всім вдається відразу добитися зіткнення ліктів і колін. Однак саме до цього слід прагнути.</li>
+                        <li>5.Ноги рухаються рівномірно, ривки не припустимі. Важливо стежити за тим, щоб дихання залишалося вільним.</li>
+                      </ul>
+
+                      <h6><b>Дотик до ніг лежачи поперемінно</b></h6>
+                      <ul>
+                        <li>1.Ляжте на спину, зігнувши коліна. </li>
+                        <li>2.Руки в сторони. </li>
+                        <li>3.Підніміть голову і лопатки в декількох сантиметрах від підлоги. </li>
+                        <li>4.Нахиліться вліво так, щоб ліва рука торкнулася лівої п’яти, потім змініть сторони.</li>
+                      </ul>
+
+                      <h6><b>Підйом ніг вгору </b></h6>
+                      <ul>
+                        <li>1.Лягайте рівно на підлогу (на килимку), покладіть руки вбік на підлозі долонями вниз.</li>
+                        <li>2.Переконайтеся, що ваша голова, ноги та дно стикаються з підлогою.</li>
+                        <li>3.Залучіть м'язи живота та схопіть сторони.</li>
+                        <li>4.Повільно підніміть ноги під кутом 90 градусів, тримаючи ноги прямими та не згинаючись на колінах.</li>
+                        <li>5.Зробіть паузу на секунду, а потім повільно опустіть ноги назад.</li>
+                      </ul>
+
+                      <h6><b>Книжка</b></h6>
+                      <ul>
+                        <li>1.Сідайте на край лавки (або на стійкий табурет, стілець, фітнес-тумбу), зведіть ноги разом і виставте вперед зі злегка зігнутими колінами. Руками упріться в край лави і відхиліть корпус назад.</li>
+                        <li>2.Піднімайте ноги, згинайте їх в колінах і підтягніть до себе. Одночасно подавайте корпус вперед (груди рухається на зустріч колін).</li>
+                        <li>3.Зробіть паузу на 1 секунду на видиху, після чого поверніться у вихідну позицію</li>
+                      </ul>
+
+                      <h6><b> Бокові скручування</b></h6>
+                      <ul>
+                        <li>1. Встаємо в положення планки</li>
+                        <li>2. Робимо нахили тілом,докоркаючись до полу правою ногою , потім на лівою ,не лягаючи при цьому всім тілом на підлогу </li>
+                      </ul>
+
+                      <h6><b>Лодочка /Супермен</b></h6>
+                      <ul>
+                        <li>1.Ляжте животом на підлогу обличчям вниз, голова злегка піднята. Руки витягніть вперед, долоні дивляться в підлогу, намагайтеся витягнутися всім тілом. Це вихідна позиція.</li>
+                        <li>2. На видиху відірвіть руки, груди і ноги від підлоги і повільно підніміть їх максимально вгору. Корпус повинен утворювати невеликий прогин в спині, все тіло напружене і підтягнуто. Намагайтеся підняти руки і ноги якомога вище, для цього включайте в роботу м’язи живота і сідниць. Чи не закидайте шию назад, вона повинна бути продовженням спини. Затримайтеся в цьому положенні на 3-4 секунди .</li>
+                        <li>3. На вдиху поволі опустіться на підлогу в початкове положення і трохи розслабтеся</li>
+                      </ul>
+
+                      <h6><b>Нахили в бік стоячи </b></h6>
+                      <ul>
+                        <li>1.Встаньте прямо, ноги на ширині плечей, руки розташовані з боків. </li>
+                        <li>2.На вдиху почніть нахилятися вправо, тримаючи спину і голову прямими, згинаючись тільки в попереку. </li>
+                        <li>3.На видиху поверніться у вихідне положення. Повторіть рух в ліву сторону.</li>
+                      </ul>
+
+                      <h6><b>Нахили в бік с гантеллю /бутилкою</b></h6>
+                      <ul>
+                        <li>1. Потрібно встати прямо, розставити ноги трохи ширше плечей.</li>
+                        <li>2. Взяти в руки бутилку </li>
+                        <li>3. Нахилитись в правий бік , потім в лівий бік .</li>
+                      </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-clock bg-gray"></i>
+              </div>
+              <br>
+              <br>
+              <br>
+
+              <a name="day-29-30"></a>
+              <div class="time-label">
+                <span class="bg-yellow">Дні 29-30</span>
+              </div>
+
+              <div>
+                <i class="fas fa-apple-alt bg-green"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Сніданок</a></h3>
+                  <div class="timeline-body">
+
+                    <ul>
+                      <li>50 гр -пшенична каша</li>
+                      <li>1шт- яйце</li>
+                      <li>50 гр -помідор</li>
+                      <li>50 гр -огірок</li>
+                      <li>10 гр-зелені </li>
+                      <li>Чай</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-52-00.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <i class="fas fa-carrot bg-orange"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Перекус</a></h3>
+                  <div class="timeline-body">
+                    <ul>
+                      <li>100 гр творог</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-52-08.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <i class="fas fa-blender bg-green"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Обід</a></h3>
+                  <div class="timeline-body">
+
+                    <ul>
+                      <li>70 гр рис</li>
+                      <li>100 гр овочі</li>
+                      <li>100 гр м’ясо курки</li>
+                      <li>150 мл сік</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-52-15.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END timeline item -->
+              <!-- timeline item -->
+
+              <div>
+                <i class="fas fa-apple-alt bg-green"></i>
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="#">Вечеря</a></h3>
+                  <div class="timeline-body">
+                    <ul>
+                      <li>Омлет ( 2 яйця)</li>
+                      <li>100 гр огірка</li>
+                      <li>100 гр помідор</li>
+                      <li>15 гр горіхи</li>
+                      <li>40 гр -сир</li>
+                      <br>
+                      <img class="img-fluid pad" src="dist/img/photo_2022-07-04_16-52-20.jpg" alt="Photo">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- timeline item тренування рук-->
+              <div>
+                <i class="fas fa-video bg-maroon"></i>
+
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="https://www.instagram.com/yankagrin97/" target="_blank">yankagrin97</a> Тренер</h3>
+
+                  <div class="timeline-body">
+                    <p><b>День №29</b></p>
+                    <div class="embed-responsive embed-responsive-16by9 col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/xipoFmMPJE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <br>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                      <button type="button" class="btn btn-block btn-secondary btn-xs cont_toggle3">Розгорнути опис вправ</button>
+                    </div>
+
+                    <div class="cont_bl3" style="display: none;">
+                      <p>
+                      <h6><b>Підйом рук вгору с гантелями</b></h6>
+                      <ul>
+                        <li>1.Для правильного виконання вправи треба стати перед дзеркалом і підняти гантелі так, щоб вони знаходилися на рівні плечей.</li>
+                        <li>2.При вичавлюванні гантелей вгору потрібно зробити видих, а при опусканні ваги – вдих.</li>
+                        <li>3.При виконанні руху лікті потрібно тримати строго вертикально.</li>
+                        <li>4.Ноги повинні стояти широко. Хребетний стовп важливо стабілізувати у вертикальному положенні. Голову потрібно тримати прямо, дивитися перед собою.</li>
+                        <li>5.При виконанні вправи ,рухи виконуються без ривків і поштовхів снарядів. Також ні в якому разі не можна відхилятися назад, а також допускати зайвий прогин в поперековому відділі. </li>
+                      </ul>
+
+                      <h6><b>Підйом рук в бік та перед собою</b></h6>
+                      <ul>
+                        <li>1.Взяти дві гантелі в руки так, щоб вони були горизонтально до підлоги. </li>
+                        <li>2.Підвестися, трохи розставити ноги і випрямити спину. </li>
+                        <li>Здійснити на вдиху махи гантелями в сторони, доводячи лікоть рівня плечей</li>
+                        <li>3.Повернути руки у вихідне положення та видихнути.</li>
+                        <li>4.У вихідному положенні гантелі розташовуються перед стегнами майже доторкаються до них.</li>
+                        <li>5.Гантелі можна тримати як нейтральним хватом (долоні повернені один до одного), так і хватом зверху (долоні дивляться на стегна).</li>
+                        <li>6.Вдихніть і, зупинивши, підніміть руки перед грудьми і опустіть на видоху.</li>
+                      </ul>
+
+                      <h6><b>Планка на прямих руках</b></h6>
+                      <ul>
+                        <li>1.Прийміть положення «упор лежачи», тіло паралельно підлозі, долоні на підлозі строго під плечима, ступні на ширині плечей, спина пряма. </li>
+                        <li>2.Сідниці та прес напружені, живіт втягнутий. </li>
+                        <li>3.Дихання рівне, спокійне – видих через рот, вдих через ніс.</li>
+                      </ul>
+
+                      <h6><b>Віджимання на колінах</b></h6>
+                      <ul>
+                        <li>1.Вихідне положення: руки розташовуються на ширині плечей, і впираються в підлогу. Коліна розміщені на поверхні підлоги, а ноги зігнуті в колінах і схрещені між собою.</li>
+                        <li>2.Виконання: випрямляємо руки і починаємо плавно опускатися. Грудна клітка, при досягненні максимально нижньої точки, повинна бути всього в декількох сантиметрах від підлоги. Якщо віджимання з колін робляться правильно, в м'язах відчувається напруга.</li>
+                        <li>3.Повернення: дійшовши до нижньої позначки, починаємо знову випрямляти руки, піднімаючи вгору корпус.</li>
+                      </ul>
+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- timeline item прес-->
+              <div>
+                <i class="fas fa-video bg-maroon"></i>
+
+                <div class="timeline-item">
+                  <h3 class="timeline-header"><a href="https://www.instagram.com/yankagrin97/" target="_blank">yankagrin97</a> Тренер</h3>
+
+                  <div class="timeline-body">
+                    <p><b>День №30</b></p>
+                    <div class="embed-responsive embed-responsive-16by9 col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/GzyFp983r2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <br>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                      <button type="button" class="btn btn-block btn-secondary btn-xs cont_toggle4">Розгорнути опис вправ</button>
+                    </div>
+
+                    <div class="cont_bl4" style="display: none;">
+                      <p>
+                      <h6><b>Класичні скручування</b></h6>
+                      <ul>
+                        <li>1.Початкове положення: лежачи на спині, ноги зігнуті в колінах і щільно стоять на підлозі.</li>
+                        <li>2. Плавно підніміть плечі на 10-15 см, округляючи спину і скручуючись у напрямку колін. </li>
+                        <li>3. Затримайтеся на 1-2 сек, потім повільно опустіть корпус, проте не торкайтеся плечима підлоги.</li>
+                      </ul>
+
+                      <h6><b>Велосипед</b></h6>
+                      <ul>
+                        <li>1.Потрібно лягти на спину, розташувати руки вздовж тіла. При цьому ноги витягнуті вільно, в них відсутня напруга. </li>
+                        <li>2.Руки відводяться за голову, потім піднімають плечі. Важливо, щоб поперек при цьому залишалася щільно притиснутою до підлоги.</li>
+                        <li>3.Ноги піднімаються, згинаються в колінах.</li>
+                        <li>4.Рухи ногами нагадують катання на велосипеді. Спочатку ліве коліно стосується правого ліктя, потім праве коліно – лівого ліктя. Не всім вдається відразу добитися зіткнення ліктів і колін. Однак саме до цього слід прагнути.</li>
+                        <li>5.Ноги рухаються рівномірно, ривки не припустимі. Важливо стежити за тим, щоб дихання залишалося вільним.</li>
+                      </ul>
+
+                      <h6><b>Дотик до ніг лежачи поперемінно</b></h6>
+                      <ul>
+                        <li>1.Ляжте на спину, зігнувши коліна. </li>
+                        <li>2.Руки в сторони. </li>
+                        <li>3.Підніміть голову і лопатки в декількох сантиметрах від підлоги. </li>
+                        <li>4.Нахиліться вліво так, щоб ліва рука торкнулася лівої п’яти, потім змініть сторони.</li>
+                      </ul>
+
+                      <h6><b>Підйом ніг вгору </b></h6>
+                      <ul>
+                        <li>1.Лягайте рівно на підлогу (на килимку), покладіть руки вбік на підлозі долонями вниз.</li>
+                        <li>2.Переконайтеся, що ваша голова, ноги та дно стикаються з підлогою.</li>
+                        <li>3.Залучіть м'язи живота та схопіть сторони.</li>
+                        <li>4.Повільно підніміть ноги під кутом 90 градусів, тримаючи ноги прямими та не згинаючись на колінах.</li>
+                        <li>5.Зробіть паузу на секунду, а потім повільно опустіть ноги назад.</li>
+                      </ul>
+
+                      <h6><b>Книжка</b></h6>
+                      <ul>
+                        <li>1.Сідайте на край лавки (або на стійкий табурет, стілець, фітнес-тумбу), зведіть ноги разом і виставте вперед зі злегка зігнутими колінами. Руками упріться в край лави і відхиліть корпус назад.</li>
+                        <li>2.Піднімайте ноги, згинайте їх в колінах і підтягніть до себе. Одночасно подавайте корпус вперед (груди рухається на зустріч колін).</li>
+                        <li>3.Зробіть паузу на 1 секунду на видиху, після чого поверніться у вихідну позицію</li>
+                      </ul>
+
+                      <h6><b> Бокові скручування</b></h6>
+                      <ul>
+                        <li>1. Встаємо в положення планки</li>
+                        <li>2. Робимо нахили тілом,докоркаючись до полу правою ногою , потім на лівою ,не лягаючи при цьому всім тілом на підлогу </li>
+                      </ul>
+
+                      <h6><b>Лодочка /Супермен</b></h6>
+                      <ul>
+                        <li>1.Ляжте животом на підлогу обличчям вниз, голова злегка піднята. Руки витягніть вперед, долоні дивляться в підлогу, намагайтеся витягнутися всім тілом. Це вихідна позиція.</li>
+                        <li>2. На видиху відірвіть руки, груди і ноги від підлоги і повільно підніміть їх максимально вгору. Корпус повинен утворювати невеликий прогин в спині, все тіло напружене і підтягнуто. Намагайтеся підняти руки і ноги якомога вище, для цього включайте в роботу м’язи живота і сідниць. Чи не закидайте шию назад, вона повинна бути продовженням спини. Затримайтеся в цьому положенні на 3-4 секунди .</li>
+                        <li>3. На вдиху поволі опустіться на підлогу в початкове положення і трохи розслабтеся</li>
+                      </ul>
+
+                      <h6><b>Нахили в бік стоячи </b></h6>
+                      <ul>
+                        <li>1.Встаньте прямо, ноги на ширині плечей, руки розташовані з боків. </li>
+                        <li>2.На вдиху почніть нахилятися вправо, тримаючи спину і голову прямими, згинаючись тільки в попереку. </li>
+                        <li>3.На видиху поверніться у вихідне положення. Повторіть рух в ліву сторону.</li>
+                      </ul>
+
+                      <h6><b>Нахили в бік с гантеллю /бутилкою</b></h6>
+                      <ul>
+                        <li>1. Потрібно встати прямо, розставити ноги трохи ширше плечей.</li>
+                        <li>2. Взяти в руки бутилку </li>
+                        <li>3. Нахилитись в правий бік , потім в лівий бік .</li>
+                      </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <i class="fas fa-clock bg-gray"></i>
+              </div>
+              <br>
+              <br>
+              <div class="time-label">
+                <span class="bg-success">Вітаю з проходженням марафону. Залиште будь ласка відгук в нашій групі.</span>
+              </div>
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+      </div>
+      <!-- /.timeline -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <strong>Марафон схуднення &copy; 2022 рік <a href="aboutUs.html">Наша команда</a>.</strong>
+    Дякує Вам що ви з нами :)
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 1.0.0-2022
+    </div>
+  </footer>
+</div>
+
+<!-- ./wrapper -->
+<script src="plugins/jquery/jquery.js"></script>
+<!-- REQUIRED SCRIPTS -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- jQuery -->
+<script>
+    function closeSidebar() {
+        if (window.matchMedia("(min-width: 990px)").matches) {
+            $("body").attr('class', 'sidebar-mini')
+        } else {
+            $("body").attr('class', 'sidebar-closed sidebar-collapse')
+        }
+    }
+    if (window.matchMedia("(min-width: 990px)").matches) {
+        $('#sidebar-t').css("position", "fixed");
+    } else {
+        $('#sidebar-t').css("position", "absolute");
+    }
+    $(document).ready(function(){
+    $('.cont_toggle1').click(function(){
+      $('.cont_b11').slideToggle(300);
+      return false;
+    });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle2').click(function(){
+          $('.cont_bl2').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle3').click(function(){
+          $('.cont_bl3').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle4').click(function(){
+          $('.cont_bl4').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle5').click(function(){
+          $('.cont_bl5').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle6').click(function(){
+          $('.cont_bl6').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle7').click(function(){
+          $('.cont_bl7').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle8').click(function(){
+          $('.cont_bl8').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle9').click(function(){
+          $('.cont_bl9').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle10').click(function(){
+          $('.cont_bl10').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle11').click(function(){
+          $('.cont_bl11').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle12').click(function(){
+          $('.cont_bl12').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle13').click(function(){
+          $('.cont_bl13').slideToggle(300);
+          return false;
+      });
+  });
+
+  $(document).ready(function(){
+      $('.cont_toggle14').click(function(){
+          $('.cont_bl14').slideToggle(300);
+          return false;
+      });
+  });
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+</body>
+</html>
