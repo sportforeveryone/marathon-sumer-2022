@@ -56,13 +56,19 @@
     <a style="text-align: center;" href="#" class="brand-link">
       <span class="brand-text font-weight-light">Марафон схуднення</span>
     </a>
-
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-header">Про нас:</li>
+          <li class="nav-item">
+            <a href="aboutUs.html" class="nav-link" onclick="closeSidebar()">
+              <i class="fas fa-child nav-icon"></i>
+              <p>Наша команда</p>
+            </a>
+          </li>
           <!-- Add icons to the links using the .nav-icon class
                <br /> with font-awesome or any other icon font library -->
           <li class="nav-header">ДНІ МАРАФОНУ:</li>
@@ -160,19 +166,12 @@
               <p>ДЕНЬ 29-30</p>
             </a>
           </li>
-          <li class="nav-header">Про нас:</li>
-          <li class="nav-item">
-            <a href="aboutUs.html" class="nav-link" onclick="closeSidebar()">
-              <i class="fas fa-child nav-icon"></i>
-              <p>Наша команда</p>
-            </a>
-          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu  -->
     </div>
     <!-- /.sidebar -->
-  </aside>
+  </aside >
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -811,62 +810,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- jQuery -->
-<script>
-    function closeSidebar() {
-        if (window.matchMedia("(min-width: 990px)").matches) {
-            $("body").attr('class', 'sidebar-mini')
-        } else {
-            $("body").attr('class', 'sidebar-closed sidebar-collapse')
-        }
-    }
-    if (window.matchMedia("(min-width: 990px)").matches) {
-        $('#sidebar-t').css("position", "fixed");
-    } else {
-        $('#sidebar-t').css("position", "absolute");
-    }
-    $(document).ready(function(){
-    $('.cont_toggle1').click(function(){
-      $('.cont_b11').slideToggle(300);
-      return false;
-    });
-  });
+<script src="dist/js/myJs.js"></script>
 
-  $(document).ready(function(){
-      $('.cont_toggle2').click(function(){
-          $('.cont_bl2').slideToggle(300);
-          return false;
-      });
-  });
-
-  $(document).ready(function(){
-      $('.cont_toggle3').click(function(){
-          $('.cont_bl3').slideToggle(300);
-          return false;
-      });
-  });
-
-  $(document).ready(function(){
-      $('.cont_toggle4').click(function(){
-          $('.cont_bl4').slideToggle(300);
-          return false;
-      });
-  });
-
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("myBtn").style.display = "block";
-        } else {
-            document.getElementById("myBtn").style.display = "none";
-        }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-</script>
 </body>
 </html>
