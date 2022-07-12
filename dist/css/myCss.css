@@ -10,3 +10,9 @@
     cursor: pointer; /* Add a mouse pointer on hover */
     background-color: #95959500;
 }
+
+.Mybutton-wrapper{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
